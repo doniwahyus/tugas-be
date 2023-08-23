@@ -1,11 +1,11 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Menjalankan Base Project - Jalankan perintah ```npm i``` atau ```npm install ``` untuk menginstal package yang dibutuhkan. - Kemudian jalankan perintah ```npm run dev``` untuk menjalankan aplikasinya. - Kemudian coba hit server dari cmd ```curl --location 'http://localhost:10000/api/v1/test'```",
   "scripts": {
     "nodemon": "nodemon --expose-gc ./bin/www",
     "dev-win": "set DEBUG=express:* & nodemon  --expose-gc./bin/www",
-    "dev": "DEBUG=express:* nodemon --expose-gc ./bin/www",
+    "dev": "set DEBUG=express:* & nodemon --expose-gc ./bin/www",
     "start": "node --expose-gc ./bin/www",
     "test": "jest --forceExit --detectOpenHandles --runInBand"
   },
@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "date-and-time": "^0.14.2",
@@ -37,6 +38,7 @@
     "hashids": "^1.2.2",
     "http-errors": "~1.6.2",
     "jest": "^27.0.4",
+    "joi": "^17.9.2",
     "json5": "^2.1.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.12",
@@ -50,5 +52,9 @@
     "winston": "^3.2.1",
     "xlsx": "^0.16.9",
     "xlsx-populate": "^1.21.0"
+  },
+  "main": "app.js",
+  "directories": {
+    "test": "test"
   }
 }
